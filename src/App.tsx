@@ -1,10 +1,11 @@
-import { useState } from "react";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <h1 className="text-3x1 font-bold underline">Hello World</h1>
+      <main className="py-10 bg-red-50 h-screen">
+        <h1 className="font-bold text-3xl text-center">To-do List</h1>
+      </main>
     </>
   );
 }
