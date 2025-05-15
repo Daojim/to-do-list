@@ -9,7 +9,7 @@ function App() {
         <div className="max-w-lg mx-auto">
           <div className="space-y-2">
             {dummyData.map((todo) => (
-              <TodoItem />
+              <TodoItem todo={todo} />
             ))}
           </div>
         </div>
