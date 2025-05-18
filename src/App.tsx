@@ -5,17 +5,22 @@ import { useState } from "react";
 function App() {
   const [todos, setTodos] = useState(dummyData);
 
+  //Function to handle a todo list being checked or not, takes in a number
   function handleToggle(id: number) {
     console.log("Toggling:", id);
+    //My state updater
     setTodos(
+      //.map() makes it a new array and loops every todo
       todos.map((todo) => {
+        // checks if the todo matches the one that's clicked
         if (todo.id === id) {
           return {
-            ...todo,
-            completed: !todo.completed,
+            ...todo, //spread operator to copy all existing properties
+            completed: !todo.completed, //changes the boolean to its opposite
           };
+          //if it's not the id I wanted
         } else {
-          return todo;
+          return todo; // leave it unchanged
         }
       })
     );

@@ -1,8 +1,10 @@
+//Importing the interface type that I created
 import type { Todo } from "../types/todo";
 
+//Defining the properties for this component
 interface TodoItemProps {
-  todo: Todo;
-  onToggle: (id: number) => void;
+  todo: Todo; //Object for this individual to-do
+  onToggle: (id: number) => void; //Function that takes in id and returns nothing
 }
 
 function TodoItem({ todo, onToggle }: TodoItemProps) {
