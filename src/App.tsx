@@ -1,4 +1,5 @@
 import TodoItem from "./components/TodoItem";
+import AddToDoForm from "./components/AddTodoForm";
 import { dummyData } from "./data/todos";
 import { useState } from "react";
 
@@ -24,6 +25,16 @@ function App() {
         }
       })
     );
+  }
+
+  function handleAdd(title: string) {
+    const newToDo = {
+      id: Date.now(), // Great way to give a new unique ID
+      title, // inputted string is now the title of the to-do object
+      completed: false,
+    };
+
+    setTodos([...todos, newToDo]); //Adds new to-do object to the end of the list
   }
 
   return (
