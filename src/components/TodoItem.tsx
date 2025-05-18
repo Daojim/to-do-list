@@ -4,7 +4,8 @@ import type { Todo } from "../types/todo";
 //Defining the properties for this component
 interface TodoItemProps {
   todo: Todo; //Object for this individual to-do
-  onToggle: (id: number) => void; //Function from App.tsx that takes in id and returns nothing
+  onToggle: (id: number) => void;
+  onDelete: (id: number) => void; //Function from App.tsx that takes in id and returns nothing
 }
 
 function TodoItem({ todo, onToggle }: TodoItemProps) {
