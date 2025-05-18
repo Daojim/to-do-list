@@ -1,5 +1,6 @@
 import TodoItem from "./components/TodoItem";
 import AddToDoForm from "./components/AddTodoForm";
+import DeleteToDoButton from "./components/DeleteToDoButton";
 import { dummyData } from "./data/todos";
 import { useState } from "react";
 
@@ -37,6 +38,8 @@ function App() {
     setTodos([...todos, newToDo]); //Adds new to-do object to the end of the list
   }
 
+  function handleDelete(id: number) {}
+
   return (
     <>
       <main className="py-10 bg-red-50 h-screen space-y-5">
@@ -44,7 +47,12 @@ function App() {
         <div className="max-w-lg mx-auto bg-red-200 rounded-md p-5">
           <div className="space-y-2">
             {todos.map((todo) => (
-              <TodoItem key={todo.id} todo={todo} onToggle={handleToggle} />
+              <TodoItem
+                key={todo.id}
+                todo={todo}
+                onToggle={handleToggle}
+                onDelete={handleDelete}
+              />
             ))}
           </div>
           <AddToDoForm onAdd={handleAdd} />
