@@ -1,3 +1,3 @@
 # To-do List using React + Vite + TypeScript + Tailwind
 
-Simple to-do list following a YouTube tutorial while I make my own adjustments to it.
+A simple To-do List app to help me learn more about TypeScript, Tailwind and React.
