@@ -27,7 +27,7 @@ function AddToDoForm({ onAdd }: AddToDoFormProps) {
           className="text-amber-50 bg-blue-700 hover:bg-amber-300"
           type="submit"
         >
-          +
+          Add
         </button>
       </form>
     </>
