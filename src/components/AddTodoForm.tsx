@@ -18,8 +18,17 @@ function AddToDoForm({ onAdd }: AddToDoFormProps) {
     <>
       {/* Create form to add a to-do */}
       <form onSubmit={handleSubmit}>
-        <input value={text} onChange={(e) => setText(e.target.value)}></input>
-        <button type="submit">Add</button>
+        <input
+          className="items-center bg-white "
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        ></input>
+        <button
+          className="text-amber-50 bg-blue-700 hover:bg-amber-300"
+          type="submit"
+        >
+          +
+        </button>
       </form>
     </>
   );
