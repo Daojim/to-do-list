@@ -1,9 +1,9 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 function AddToDoForm() {
   const [text, setText] = useState("");
 
-  function handleSubmit(e) {
+  function handleSubmit(e: React.FormEvent) {
     e.preventDefault(); //Prevents the browser from refreshing
   }
 
