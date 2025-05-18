@@ -2,6 +2,7 @@ import TodoItem from "./components/TodoItem";
 import AddToDoForm from "./components/AddTodoForm";
 import { dummyData } from "./data/todos";
 import { useState } from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 function App() {
   const [todos, setTodos] = useState(dummyData);
@@ -57,6 +58,22 @@ function App() {
               />
             ))}
           </div>
+        </div>
+        <div className="fixed bottom-4 right-4 flex gap-4">
+          <a
+            href="https://github.com/daojim"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub size={32} />
+          </a>
+          <a
+            href="https://linkedin.com/in/daojim"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin size={32} />
+          </a>
         </div>
       </main>
     </>
