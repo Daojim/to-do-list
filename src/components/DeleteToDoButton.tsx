@@ -4,7 +4,11 @@ interface DeleteToDoButtonProps {
 }
 
 function DeleteToDoButton({ onDelete, id }: DeleteToDoButtonProps) {
-  return <button onClick={() => onDelete(id)}>X</button>;
+  return (
+    <button className="ml-auto" onClick={() => onDelete(id)}>
+      X
+    </button>
+  );
 }
 
 export default DeleteToDoButton;

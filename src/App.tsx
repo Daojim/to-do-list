@@ -1,6 +1,5 @@
 import TodoItem from "./components/TodoItem";
 import AddToDoForm from "./components/AddTodoForm";
-import DeleteToDoButton from "./components/DeleteToDoButton";
 import { dummyData } from "./data/todos";
 import { useState } from "react";
 
@@ -38,7 +37,9 @@ function App() {
     setTodos([...todos, newToDo]); //Adds new to-do object to the end of the list
   }
 
-  function handleDelete(id: number) {}
+  function handleDelete(id: number) {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  }
 
   return (
     <>
