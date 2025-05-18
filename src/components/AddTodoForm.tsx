@@ -17,11 +17,12 @@ function AddToDoForm({ onAdd }: AddToDoFormProps) {
   return (
     <>
       {/* Create form to add a to-do */}
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="flex">
         <input
-          className="items-center bg-white "
+          className="rounded-s-md grow border border-gray-400 bg-white p-2"
           value={text}
           onChange={(e) => setText(e.target.value)}
+          placeholder="What do you want to add?"
         ></input>
         <button
           className="text-amber-50 bg-blue-700 hover:bg-amber-300"
