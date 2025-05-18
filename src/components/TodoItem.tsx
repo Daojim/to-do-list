@@ -1,5 +1,6 @@
 //Importing the interface type that I created
 import type { Todo } from "../types/todo";
+import DeleteToDoButton from "./DeleteToDoButton";
 
 //Defining the properties for this component
 interface TodoItemProps {
@@ -8,7 +9,7 @@ interface TodoItemProps {
   onDelete: (id: number) => void; //Function from App.tsx that takes in id and returns nothing
 }
 
-function TodoItem({ todo, onToggle }: TodoItemProps) {
+function TodoItem({ todo, onToggle, onDelete }: TodoItemProps) {
   return (
     <div>
       <label className="flex items-center gap-2 border rounded-md p-2 border-gray-400 bg-white hover:bg-amber-300">
@@ -21,6 +22,7 @@ function TodoItem({ todo, onToggle }: TodoItemProps) {
         <span className={todo.completed ? "line-through text-gray-400" : ""}>
           {todo.title}
         </span>
+        <DeleteToDoButton onDelete={onDelete} id={todo.id} />
       </label>
     </div>
   );
