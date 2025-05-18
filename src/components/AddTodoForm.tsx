@@ -23,9 +23,9 @@ function AddToDoForm({ onAdd }: AddToDoFormProps) {
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder="What do you want to add?"
-        ></input>
+        />
         <button
-          className="text-amber-50 bg-blue-700 hover:bg-amber-300"
+          className="w-16 rounded-e-md text-amber-50 bg-blue-700  hover:bg-green-600"
           type="submit"
         >
           Add
